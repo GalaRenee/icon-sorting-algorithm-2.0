@@ -1,8 +1,8 @@
-# icon-sorting-algorithm
+# Icon-sorting-algorithm🌸🍵⭐️
 
 A sorting visualizer built in Typescript with Vite~
 
-## Features:
+## ⭐️ Features:
 
 "Bucket Mode" with icons and themed progress bars, and "Graph Mode" for visualizing Big O Complexity and algorithm efficiency. 
 
@@ -19,7 +19,7 @@ Includes 9 sorting algorithms (Bubble, Insertion, Merge, Quick, Heap, Counting, 
 Default themed visuals (Cherry Blossom, Rose, etc.)
 
 
-## Tech Stack:
+## ⭐️ Tech Stack:
 - Vite
 - Typescript
 - Chart.js (for graph view)
@@ -27,7 +27,7 @@ Default themed visuals (Cherry Blossom, Rose, etc.)
 
 
 
-## Usage:
+## ⭐️ Usage:
 - Select an algorithm from the dropdown.
 - Choose array size (Demo = 100, Big-O = up to 50,000)
 - Watch Bucket Mode sort into a themed bucket with a progress bar.
@@ -37,11 +37,11 @@ Default themed visuals (Cherry Blossom, Rose, etc.)
 [Insert Screenshots and Demo here]
 
 
-## Roadmap:
+## ⭐️ Roadmap:
 - Add more themes
 - Add dark/light mode
 
-## License:
+## ⭐️ License:
 Apache License 2.0 
 See the LICENSE file for details. 
 
