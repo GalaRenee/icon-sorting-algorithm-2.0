@@ -14,7 +14,7 @@ Graph Mode ~ Bar graphs comparing algorithm time, swaps, and comparisons.
 
 Supports up to 10,000 elements being sorted for true Big O demos.
 
-Includes 9 sorting algorithms (Bubble, Insertion, Merge, Quick, Heap, Counting, Radix, Bucket, Quickselect.)
+Includes 7 sorting algorithms (Insertion, Merge, Quick, Heap, Counting, Radix, and Bucket)
 
 Default themed visuals (Cherry Blossom, Rose, etc.)
 
