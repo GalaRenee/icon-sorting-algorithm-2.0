@@ -1,0 +1,14 @@
+:root {
+                --color-primary: #FF6B9D;
+                --color-secondary: #C77DFF;
+                --color-tertiary: #9D4EDD;
+                --color-quaternary: #7B2CBF;
+                --color-accent: #FFB4D6;
+                --bg-gradient: linear-gradient(135deg, #FFE5F0 0%, #FFF5E6 50%, #FFE5D9 100%);
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
