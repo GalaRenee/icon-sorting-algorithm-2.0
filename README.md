@@ -12,7 +12,7 @@ Bucket Mode ~ Icon-specific buckets + themed progress bars
 
 Graph Mode ~ Bar graphs comparing algorithm time, swaps, and comparisons. 
 
-Supports up to 50,000 elements being sorted for true Big O demos.
+Supports up to 10,000 elements being sorted for true Big O demos.
 
 Includes 9 sorting algorithms (Bubble, Insertion, Merge, Quick, Heap, Counting, Radix, Bucket, Quickselect.)
 
