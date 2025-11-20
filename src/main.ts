@@ -1,4 +1,4 @@
-import { ThemeConfig, SortItem, SortingMetrics, AlgorithmResult, AlgorithmName } from './types';
+import { ThemeConfig, SortItem, SortingMetrics, AlgorithmResult, AlgorithmName } from './core';
 import { getTheme } from './themes';
 
 const ALGORITHM_COLORS: { [key: string]: string } = {

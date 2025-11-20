@@ -1,5 +1,3 @@
-import { ThemeConfig } from '../types';
-
 export const gardenTheme: ThemeConfig = {
     name: 'garden',
     displayName: 'Garden',
