@@ -6,15 +6,15 @@ A sorting visualizer built in Typescript with Vite~
 
 "Bucket Mode" with icons and themed progress bars, and "Graph Mode" for visualizing Big O Complexity and algorithm efficiency. 
 
-Handles up to 50,000 values to demonstrate complexity. 
+Handles up to 10,000 values to demonstrate complexity. 
 
 Bucket Mode ~ Icon-specific buckets + themed progress bars 
 
 Graph Mode ~ Bar graphs comparing algorithm time, swaps, and comparisons. 
 
-Supports up to 50,000 elements being sorted for true Big O demos.
+Supports up to 10,000 elements being sorted for true Big O demos.
 
-Includes 9 sorting algorithms (Bubble, Insertion, Merge, Quick, Heap, Counting, Radix, Bucket, Quickselect.)
+Includes 7 sorting algorithms (Insertion, Merge, Quick, Heap, Counting, Radix, and Bucket)
 
 Default themed visuals (Cherry Blossom, Rose, etc.)
 
@@ -29,7 +29,7 @@ Default themed visuals (Cherry Blossom, Rose, etc.)
 
 ## ⭐️ Usage:
 - Select an algorithm from the dropdown.
-- Choose array size (Demo = 100, Big-O = up to 50,000)
+- Choose array size (Demo = 100, Big-O = up to 10,000)
 - Watch Bucket Mode sort into a themed bucket with a progress bar.
 - Click "Graph" to compare results. 
 
@@ -40,6 +40,7 @@ Default themed visuals (Cherry Blossom, Rose, etc.)
 ## ⭐️ Roadmap:
 - Add more themes
 - Add dark/light mode
+- Allow more elements for sorting 
 
 ## ⭐️ License:
 Apache License 2.0 

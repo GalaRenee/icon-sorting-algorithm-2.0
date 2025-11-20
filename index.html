@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -91,3 +92,98 @@
 </body>
 </html>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Algorithm Sorter</title>
+        <link rel=""stylesheet" href="./src/styles/main.css">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="theme-selector-wrapper">
+                    <label for="themeSelect">Theme:</label>
+                    <select id="themeSelect" class=""theme-select">
+                        <option value="garden">🌷 Garden</option>
+                        <option value="space">☄️ Space</option>
+                        <option value="spring">🦋 Spring</option>
+                        <option value="ocean"> 🌊 Ocean</option>
+                    </select>
+                </div>
+                <h1 class="title">
+                    <span class="title-part1" id="titlePart1">Garden</span>
+                    <span class="title-part2" id="titlePart2">Algorithm</span>
+                </h1>
+                <div class="theme-icons" id="themeIcons">
+                    <span class="icon">🌸</span>
+                    <span class="icon">🥀</span>
+                    <span class="icon">🌷</span>
+                    <span class="icon">🌼</span>
+                </div>
+            </header>
+
+            <!-- Control Buttons -->
+            <div class="controls-panel">
+                <button id="startBtn" class="btn btn-primary"> 
+                    <span class="btn-icon">▶</span> Start Sorting
+                </button>
+                <button id="shuffleBtn" class="btn btn-secondary">
+                    <span class="btn-icon">🔀</span> Shuffle it Up
+                <button id="resetBtn" class="btn btn-tertiary">
+                    <span class="btn-icon">🔄</span> New Sort 
+                </button>
+                <div class="select-wrapper">
+                    <select id="elementCount" class="btn btn-quaternay">
+                        <option value="100">100 Elements</option>
+                        <option value="250">250 Elements</option>
+                        <option value="500"> 500 Elements</option>
+                        <option value="1000">1000 Elements</option>
+                        <option value="2500"> 2500 Elements</option>
+                        <option value="5000"> 5000 Elements</option>
+                        <option value="10000"> 10000 Elements</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Algorithm Selection -->
+            <div class="algorithm-panel">
+                <div class="algorithm-buttons">
+                    <button class="algo-btn active" data-algo="insertion">Insertion Sort</button>
+                    <button class="algo-btn active" data-algo="merge">Merge Sort</button>
+                    <button class="algo-btn active" data-algo="quick">Quick Sort</button>
+                    <button class="algo-btn active" data-algo="heap">Heap Sort</button>
+                    <button class="algo-btn active" data-algo="counting">Counting Sort</button>
+                    <button class="algo-btn active" data-algo="radix">Radix Sort</button>
+                    <button class="algo-btn active" data-algo="bucket">Bucket Sort</button>
+                </div>
+                <button id="selectAllBtn" class="btn-select-all"> Select All</button>
+            </div>
+
+            <!-- Item Display -->
+             <div class="item-display">
+                <h2 class="display-title" id="displayTitle">Mixed Items</h2>
+                <p class=""display-title id="displaySubtitle">--- Items are waiting to be matched. ---</p>
+                <div id="itemGrid" class="item-grid"></div>
+             </div>
+
+             <!-- Progress Buckets -->
+              <div class="buckets-container" id="bucketsContainer">
+                  <!-- Dynamically generated buckets -->
+              </div>
+
+              <!-- Time Complexity Graph -->
+               <div class="graph-container">
+                   <h2 class="graph-title">Algorithm Performance - Time Complxitity</h2>
+                   <div class="graph-legend" id="graphLegend"></div>
+                   <canvas id="performanceGraph"></canvas>
+               </div>
+        </div>
+
+        <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
+
+>>>>>>> 8abeb0120aff34e33ce0c31eeb27fcecb6b60b3b
