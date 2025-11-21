@@ -94,5 +94,31 @@ async function merge(
     left: number,
     mid: number, 
     right: number,
-    onProgress?: (counts )
-)
+    onProgress?: (counts: number[]) => void 
+): Promise<void> {
+    const leftArr = arr.slice(left, mid + 1);
+    const rightArr = arr.slice(mid + 1, right + 1);
+
+    let i = 0, j = 0, k = left;
+
+    while (i < leftArr.length && j < rightArr.length) {
+        metrics.comparisons++;
+        if (leftArr[i].value <= rightArr[j].value) {
+            arr[k++] = leftArr[i++];
+        } else {
+            arr[k++] = rightArr[j++];
+        }
+        TextMetrics.swaps++;
+
+        if (recordDataPoint(TextMetrics, startTime) && onProgress) {
+            onProgress(countSortedItems(arr));
+            if (arr.length < 1000) {
+                await new Promise(resolve => setTimeout(resolve, 1));
+            }
+        }
+
+    }
+
+    while (i < leftArr.length) arr[k++] = leftArr[i++];
+    while (j < rightArr.length) arr[k++] = rightArr[j++];
+}
