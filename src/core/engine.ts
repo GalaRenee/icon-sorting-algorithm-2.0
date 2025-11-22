@@ -1,8 +1,8 @@
-import { SortItem, SortingMetrics, ALgorithmResult, AlgorithmName } from '../../types';
+import { SortItem, SortingMetrics, AlgorithmResult, AlgorithmName } from '../../types';
 import { createMetrics, recordDataPoint, finalizeMetrics } from '../metrics';
-import { counSortedItems } from '../utils';
+import { countSortedItems } from '../utils';
 
-export async fucntion runAlgorithm(
+export async function runAlgorithm(
     algorithmName: AlgorithmName, 
     items: SortItem[],
     onProgress?: (counts: number[]) => void 
@@ -28,23 +28,23 @@ export async fucntion runAlgorithm(
             await countingSort(arrayCopy, metrics, startTime, onProgress);
             break;
         case 'radix':
-            await radixSort(arrayCopy, metrics, startTime, onProgress):
+            await radixSort(arrayCopy, metrics, startTime, onProgress);
             break;
         case 'bucket':
             await bucketSort(arrayCopy, metrics, startTime, onProgress);
     }
 
-    finalizeMetrics(TextMetrics, startTime);
+    finalizeMetrics(metrics, startTime);
 
     return {
-        name: AlgorithmName, 
+        name: algorithmName, 
         metrics,
         completed: true
     };
 }
 
 // Insertion Sort 
-async funciton insertionSort(
+async function insertionSort(
     arr: SortItem[],
     metrics: SortingMetrics,
     startTime: number, 
@@ -55,13 +55,13 @@ async funciton insertionSort(
         let j = i - 1;
 
         while (j >= 0 && arr[j].value > key.value) {
-            TextMetrics.comparisons++;
+            metrics.comparisons++;
             arr[j + 1] = arr[j];
-            TextMetrics.swaps++;
+            metrics.swaps++;
             j--;
 
-            if (recordDataPoint(TextMetrics, startTime) && onProgress) {
-                onprogress(countSortedItems(arr));
+            if (recordDataPoint(metrics, startTime) && onProgress) {
+                onProgress(countSortedItems(arr));
                 if (arr.length < 1000) {
                     await new Promise(resolve => setTimeout(resolve, 1));
                 }
@@ -85,7 +85,7 @@ async function mergeSort(
         const mid = Math.floor((left + right) / 2);
         await mergeSort(arr, left, mid, metrics, startTime, onProgress);
         await mergeSort(arr, mid + 1, right, metrics, startTime, onProgress);
-        await mergeSort(arr, left, mid, right, metrics, startTime, onProgress);
+        await merge(arr, left, mid, right, metrics, startTime, onProgress);
     }
 }
 
@@ -94,6 +94,8 @@ async function merge(
     left: number,
     mid: number, 
     right: number,
+    metrics: SortingMetrics,
+    startTime: number,
     onProgress?: (counts: number[]) => void 
 ): Promise<void> {
     const leftArr = arr.slice(left, mid + 1);
@@ -108,9 +110,9 @@ async function merge(
         } else {
             arr[k++] = rightArr[j++];
         }
-        TextMetrics.swaps++;
+        metrics.swaps++;
 
-        if (recordDataPoint(TextMetrics, startTime) && onProgress) {
+        if (recordDataPoint(metrics, startTime) && onProgress) {
             onProgress(countSortedItems(arr));
             if (arr.length < 1000) {
                 await new Promise(resolve => setTimeout(resolve, 1));
@@ -130,10 +132,10 @@ async function quickSort(
     high: number, 
     metrics: SortingMetrics,
     startTime: number, 
-    onProgress?: (cunts: number[]) => void
+    onProgress?: (counts: number[]) => void
 ): Promise<void> {
     if (low < high) {
-        const pi = await PageTransitionEvent(arr, low, high, metrics, startTime, onProgress);
+        const pi = await partition(arr, low, high, metrics, startTime, onProgress);
         await quickSort(arr, low, pi - 1, metrics, startTime, onProgress);
         await quickSort(arr, pi + 1, high, metrics, startTime, onProgress);
     }
@@ -160,7 +162,7 @@ async function partition(
 
         if (recordDataPoint(metrics, startTime) && onProgress) {
             onProgress(countSortedItems(arr));
-            if (Array.length < 1000) {
+            if (arr.length < 1000) {
                 await new Promise(resolve => setTimeout(resolve, 1));
             }
         }
@@ -250,7 +252,7 @@ async function countingSort(
     }
 
     for (let i = 1; i <= max; i++) {
-        count[i] += count [i = 1];
+        count[i] += count [i - 1];
         metrics.comparisons++;
     }
 
@@ -341,7 +343,7 @@ async function bucketSort(
 
     let index = 0;
     for (let i = 0; i < bucketCount; i++) {
-        await insertionSortFromBucket(buckets[i], metrics);
+        await insertionSortForBucket(buckets[i], metrics);
 
         for (let j = 0; j < buckets[i].length; j++) {
             arr[index++] = buckets[i][j];
