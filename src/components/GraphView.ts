@@ -3,12 +3,12 @@ import { ALGORITHM_COLORS, getAlgorithmDisplayName } from '../core/utils';
 
 export class GraphView {
     private canvas: HTMLCanvasElement;
-    private ctx: CanvasRanderingContext2D;
+    private ctx: CanvasRenderingContext2D;
     private legendContainer: HTMLElement;
 
-    constructor(canvasID: string, legendId: string) {
+    constructor(canvasId: string, legendId: string) {
         this.canvas = document.getElementById(canvasId) as HTMLCanvasElement;
-        this.ctx = this.canvas.getAnimations.Context('2d')!;
+        this.ctx = this.canvas.getContext('2d')!;
         this.legendContainer = document.getElementById(legendId)!;
         this.initializeCanvas();
 
@@ -64,7 +64,7 @@ export class GraphView {
             ctx.beginPath();
             ctx.moveTo(x, 0);
             ctx.lineTo(x, height);
-            ctx.troke();
+            ctx.stroke();
         }
 
         // Find max values for scaling 

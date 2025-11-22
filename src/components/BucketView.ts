@@ -15,7 +15,7 @@ export class BucketView {
         this.progressBars.clear();
         this.bucketSize = Math.ceil(totalElements / 4);
 
-        Object.defineProperties(theme.items).forEach(([key, item]) => {
+        Object.entries(theme.items).forEach(([key, item]) => {
             const progressBar = new ProgressBar(key, item.label, item.emoji, item.bucketColor);
             progressBar.reset(this.bucketSize);
             this.progressBars.set(key, progressBar);

@@ -191,7 +191,7 @@ class AlgorithmSorter {
         grid.innerHTML = '';
 
         const visibleCount = Math.min(this.items.length, 100);
-        const strp = Math.max(1, Math.floor(this.items.length / visibleCount));
+        const step = Math.max(1, Math.floor(this.items.length / visibleCount));
 
         for (let i = 0; i < this.items.length; i += step) {
             const item = this.items[i];

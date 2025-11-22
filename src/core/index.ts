@@ -1,3 +1,5 @@
+import { ThemeConfig } from '../types';
+
 export const gardenTheme: ThemeConfig = {
     name: 'garden',
     displayName: 'Garden',
@@ -48,8 +50,8 @@ export const spaceTheme: ThemeConfig = {
     colors: {
         primary: '#667EEA',
         secondary: '#764BA2',
-        tertiary: '#4C51BF',
-        quternary: '#2D3748',
+        teritary: '#4C51BF',
+        quaternary: '#2D3748',
         accent: '#9F7AEA',
         background: 'linear-graident(135deg, #1A202C 0%, #2D3748 50%, #4A5568 100%)'
     },
@@ -92,7 +94,7 @@ export const springTheme: ThemeConfig = {
     colors: {
         primary: '#48BB78',
         secondary: '#38B2AC', 
-        tertiary: '#4299E1',
+        teritary: '#4299E1',
         quaternary: '#9F7AEA',
         accent: '#68D391',
         background: 'linear-gradient(135deg, #E6FFFA 0%, #F0FFF4 50%, #FEFCBF 100%)'
@@ -136,7 +138,7 @@ export const oceanTheme: ThemeConfig = {
     colors: {
         primary: '#0BC5EA',
         secondary: '#00B5D8',
-        tertiary: '#0987A0',
+        teritary: '#0987A0',
         quaternary: '#065666',
         accent: '#76E4F7',
         background: 'linear-gradient(135deg, #E0F7FA 0%, #B2EBF2 50%, #80DEEA 100%)'
