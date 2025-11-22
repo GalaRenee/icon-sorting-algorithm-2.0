@@ -1,4 +1,4 @@
-import { SortItem, SortingMetrics, AlgorithmResult, AlgorithmName } from '../../types';
+import { SortItem, SortingMetrics, AlgorithmResult, AlgorithmName } from '../../types/index';
 import { createMetrics, recordDataPoint, finalizeMetrics } from '../metrics';
 import { countSortedItems } from '../utils';
 

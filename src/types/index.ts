@@ -35,7 +35,7 @@ export interface SortingMetrics {
     comparisons: number;
     swaps: number;
     timeElapsed: number;
-    dataPoints: { time: number; operation: number }[];
+    dataPoints: { time: number; operations: number }[];
 }
 
 export interface AlgorithmResult {

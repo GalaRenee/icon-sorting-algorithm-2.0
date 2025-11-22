@@ -88,7 +88,7 @@ export class GraphView {
             ctx.beginPath();
 
             result.metrics.dataPoints.forEach((point, index) => {
-                const x = (point.time / maxTime) width;
+                const x = (point.time / maxTime) * width;
                 const y = height - (point.operations / maxOps) * height;
 
                 if (index === 0) {
