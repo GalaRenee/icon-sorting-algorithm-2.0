@@ -62,7 +62,7 @@ class AlgorithmSorter {
         const resetBtn = document.getElementById('resetBtn')!;
         resetBtn.addEventListener('click', () => this.resetSorting()); 
 
-        const elementCount = document.getElementById('ementCount') as HTMLSelectElement;
+        const elementCount = document.getElementById('elementCount') as HTMLSelectElement;
         elementCount.addEventListener('change', (e) => {
             this.totalElements = parseInt((e.target as HTMLSelectElement).value);
             this.generateItems();
@@ -109,7 +109,7 @@ class AlgorithmSorter {
         const root = document.documentElement;
         root.style.setProperty('--color-primary', this.currentTheme.colors.primary);
         root.style.setProperty('--color-secondary', this.currentTheme.colors.secondary);
-        root.style.setProperty('--color-teritary', this.currentTheme.colors.teritary);
+        root.style.setProperty('--color-tertiary', this.currentTheme.colors.teritary);
         root.style.setProperty('--color-quaternary', this.currentTheme.colors.quaternary);
         root.style.setProperty('--color-accent', this.currentTheme.colors.accent);
         root.style.setProperty('--bg-gradient', this.currentTheme.colors.background); 

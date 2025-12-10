@@ -4,7 +4,7 @@ export interface ThemeConfig {
     colors: {
         primary: string;
         secondary: string;
-        teritary: string;
+        tertiary: string;
         quaternary: string;
         accent: string;
         background: string;

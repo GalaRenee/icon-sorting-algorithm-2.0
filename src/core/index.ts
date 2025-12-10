@@ -6,7 +6,7 @@ export const gardenTheme: ThemeConfig = {
     colors: {
         primary: '#FF6B9D',
         secondary: '#C77DFF',
-        teritary: '#9D4EDD',
+        tertiary: '#9D4EDD',
         quaternary: '#7B2CBF',
         accent: '#FFB4D6',
         background: 'linear-gradient(135deg, #FFE5F0 0%, #FFF5E6 50%, #FFE5D9 100%)'
@@ -50,10 +50,10 @@ export const spaceTheme: ThemeConfig = {
     colors: {
         primary: '#667EEA',
         secondary: '#764BA2',
-        teritary: '#4C51BF',
+        tertiary: '#4C51BF',
         quaternary: '#2D3748',
         accent: '#9F7AEA',
-        background: 'linear-graident(135deg, #1A202C 0%, #2D3748 50%, #4A5568 100%)'
+        background: 'linear-gradient(135deg, #1A202C 0%, #2D3748 50%, #4A5568 100%)'
     },
     items: {
         'planet': {
@@ -70,7 +70,7 @@ export const spaceTheme: ThemeConfig = {
         },
         'rocket': {
             emoji: '🚀',
-            label: 'Rokcet',
+            label: 'Rocket',
             value: 2,
             bucketColor: '#FCB181'
         },
@@ -94,7 +94,7 @@ export const springTheme: ThemeConfig = {
     colors: {
         primary: '#48BB78',
         secondary: '#38B2AC', 
-        teritary: '#4299E1',
+        tertiary: '#4299E1',
         quaternary: '#9F7AEA',
         accent: '#68D391',
         background: 'linear-gradient(135deg, #E6FFFA 0%, #F0FFF4 50%, #FEFCBF 100%)'
@@ -138,7 +138,7 @@ export const oceanTheme: ThemeConfig = {
     colors: {
         primary: '#0BC5EA',
         secondary: '#00B5D8',
-        teritary: '#0987A0',
+        tertiary: '#0987A0',
         quaternary: '#065666',
         accent: '#76E4F7',
         background: 'linear-gradient(135deg, #E0F7FA 0%, #B2EBF2 50%, #80DEEA 100%)'

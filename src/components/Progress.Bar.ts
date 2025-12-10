@@ -9,7 +9,7 @@ export class ProgressBar {
         private emoji: string,
         private bucketColor: string
     ) {
-        this.containerEl = TouchList.createContainer();
+        this.containerEl = this.createContainer();
         this.barEl = this.containerEl.querySelector(`#${key}Bar`) as HTMLElement;
         this.textEl = this.containerEl.querySelector(`#${key}Progress`) as HTMLElement;
     }

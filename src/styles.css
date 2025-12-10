@@ -15,7 +15,7 @@
 
     body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: var (--bg-gradient);
+    background: var(--bg-gradient);
     min-height: 100vh;
     padding: 20px;
     transition: background 0.5s ease; 
@@ -59,7 +59,7 @@ header {
 }
 
 .theme-select:hover {
-    border-color: var(--color-rpimary);
+    border-color: var(--color-primary);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -128,7 +128,7 @@ header {
     color: white;
 }
 
-.btn-teritary {
+.btn-tertiary {
     background: white;
     color: var(--color-secondary);
     border: 2px solid var(--color-secondary);
@@ -202,7 +202,7 @@ header {
     border: 2px solid var(--color-tertiary);
     border-radius: 10px;
     background: white;
-    color: var(--color-teritary);
+    color: var(--color-tertiary);
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -286,12 +286,12 @@ header {
         opacity: 0;
         transform: scale(0.8);
     }
+    50% {
+        transform: scale(1.05);
+    }
     to {
         opacity: 1;
         transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
     }
 }
 
@@ -348,7 +348,7 @@ header {
     width: 0%;
     border-radius: 15px;
     transition: width 0.3s ease;
-    background: linear-graident(90deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 100%);
 }
 
 .bucket-icon {
@@ -387,7 +387,7 @@ header {
     padding: 8px 15px;
     background: white;
     border-radius: 8px;
-    font-weight: 600px;
+    font-weight: 600;
 }
 
 .legend-color {
@@ -415,7 +415,16 @@ header {
         transform: rotate(0deg);
     }
     to {
-        tranform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
     }
 }
 

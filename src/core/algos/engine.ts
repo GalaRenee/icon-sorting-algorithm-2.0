@@ -367,7 +367,7 @@ async function insertionSortForBucket(
         const key = arr[i];
         let j = i - 1;
 
-        while (j >= 0 && arr[j]. value > key.value) {
+        while (j >= 0 && arr[j].value > key.value) {
             metrics.comparisons++;
             arr[j + 1] = arr[j];
             j--;
